@@ -1,9 +1,4 @@
-﻿using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Hosting;
-using Newtonsoft.Json;
+﻿using Newtonsoft.Json;
 
 namespace DeserializationDemo;
 
@@ -46,11 +41,12 @@ public class Startup
 
     private static void SetupFilters(IServiceCollection services)
     {
-        services.AddControllers(
-                options => { options.Filters.Add(typeof(ContractValidationFilter)); })
-            .AddNewtonsoftJson(options =>
+        services.AddControllers(options =>
             {
-                options.SerializerSettings.TypeNameHandling = TypeNameHandling.None;
-            });
+                options.Filters.Add(typeof(ContractValidationFilter));
+                // options.ModelBinderProviders.Insert(0, new BaseSettingModelBinderProvider());
+                options.ModelBinderProviders.Insert(0, new DemoContract2ModelBinderProvider());
+            })
+            .AddNewtonsoftJson(options => { options.SerializerSettings.TypeNameHandling = TypeNameHandling.None; });
     }
 }

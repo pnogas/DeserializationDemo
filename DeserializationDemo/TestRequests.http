@@ -5,7 +5,11 @@ Content-Type: application/json
   "Feature": "Wifi",
   "Settings": {
     "Ssid": "hello",
-    "Password": "1234"
+    "Password": "1234",
+    "Foo": {
+      "Bar": 1,
+      "Buzz": true
+    }
   }
 }
 

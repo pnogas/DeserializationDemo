@@ -18,7 +18,7 @@ public class DemoController
     
     [HttpPost]
     [Route("test2")]
-    public void DoTest([FromBody] DemoContract2 contract2)
+    public void DoTest2([FromBody] DemoContract2 contract2)
     {
         Console.WriteLine("test2");
         _thirdPartyCode.DoStuff(contract2.Feature, contract2.Settings as IDictionary<string, object>);
