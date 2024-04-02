@@ -47,6 +47,8 @@ public class Startup
                 // options.ModelBinderProviders.Insert(0, new BaseSettingModelBinderProvider());
                 options.ModelBinderProviders.Insert(0, new DemoContract2ModelBinderProvider());
             })
+            // Change TypeNameHandling to reproduce exploit
             .AddNewtonsoftJson(options => { options.SerializerSettings.TypeNameHandling = TypeNameHandling.None; });
+        
     }
 }

@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
 
 namespace DeserializationDemo;
 
@@ -12,6 +13,9 @@ public class DemoController
     [Route("test1")]
     public void DoTest([FromBody] DemoContract1 contract1)
     {
+        // attach breakpoint here and see
+        // contract1.Settings["Foo"] is of type Newtonsoft.Json.Linq.JObect and not TestObject with TypeNameHandling.None
+        // contract1.Settings["Foo"] is of type TestObject with TypeNameHandling.All
         Console.WriteLine("test1");
         _thirdPartyCode.DoStuff(contract1.Feature, contract1.Settings);
     }
