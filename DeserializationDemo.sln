@@ -1,0 +1,16 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeserializationDemo", "DeserializationDemo\DeserializationDemo.csproj", "{F585C2C4-2939-4A48-8BF1-0C90490FAC4A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F585C2C4-2939-4A48-8BF1-0C90490FAC4A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F585C2C4-2939-4A48-8BF1-0C90490FAC4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F585C2C4-2939-4A48-8BF1-0C90490FAC4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F585C2C4-2939-4A48-8BF1-0C90490FAC4A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

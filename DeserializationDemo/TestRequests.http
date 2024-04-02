@@ -1,0 +1,26 @@
+POST http://localhost:5000/base/demo/test1
+Content-Type: application/json
+
+{
+  "Feature": "Wifi",
+  "Settings": {
+    "Ssid": "hello",
+    "Password": "1234"
+  }
+}
+
+###
+
+POST http://localhost:5000/base/demo/test2
+Content-Type: application/json
+
+{
+  "Feature": "Wifi",
+  "Settings": {
+    "Ssid": "hello",
+    "Password": "1234"
+  }
+}
+
+
+
